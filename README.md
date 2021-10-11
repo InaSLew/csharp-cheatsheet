@@ -7,12 +7,12 @@ Keyword |                  Summary                   | Sample Code | Mentioned I
 Variable Initialization | When a value is assigned to a variable for the first time | `int a = 5;` | [Variables](https://github.com/marczaku/csharp-basics/blob/main/slides/003.3.1-console-basics-1.md#variable-initialization)
 `dotnet new console -o project-name` | CLI to create dotnet console project | `dotnet new console -o Battleships`  | ?
 Script Execution Order | Execution of code is top-down and left-to-right | `` | ?
-Formatting | ? | ? | ?
+Formatting | the style in which the code is written, e.g. trailing open curly brace or break a new line for open curly brace | ? | ?
 `Console.WriteLine` | The method prints out the given argument(s) into the terminal and break into a new line | `Console.WriteLine("Hello world") // will print "Hello world\n"` | ?
 `Console.Write` | The method prints out the given argument(s) into the terminal **WITHOUT** any line-break | `Console.Write("Hello world") // will pint "Hello world"` | ?
 Multi-Line Comment | Allow multi-line comments | `/*This is a multiline\n comment*/` | ?
-XML Documentation Comment | ? | ? | ?
-Variable | ? | ? | ?
+XML Documentation Comment | Comments that can used to produce API documentation | `/// <summary>This class does...</summary>` | ?
+Variable | a piece of memory to retain data for reference and/or manipulation by a computer program | ? | ?
 Variable Declaration | Declare a variable of a data type but not assigning a value to it | `string greeting;` | ?
 Variable Assignment | Assign a value to a variable | `greeting = "Morning!"` | ?
 Uninitialized Variable | A declared variable  | ? | ?
@@ -30,7 +30,7 @@ Implicit Casting | Cast from one data type to another without any special syntax
 Explicit Casting | Cast from one data type to another using a cast expression due to potential information loss | `float a = 10f; [...] int b = (int)a; // Compiler requires explicit cast expression` | ?
 Type Conversion | Converting from one data to another using the `Convert` class  | `int a = Convert.ToInt32("1");` | ?
 `Convert.ToInt32` | Converts a specified value to a 32-bit signed integer. | `int a = Convert.ToInt32("1");` | ?
-Operators | ? | ? | ?
+Operators | a character/characters that determine what action to take | ? | ?
 Arithmetic Operators | Operators used to perform simple math operations | `int a = 4; int b = 2; a+b; a-b; a*b; a/b; a*b; a%b`; | ?
 `+` | Plus the left-hand side to right-hand side; also does concatenation if expressions on both sides are `string`s | `int a = 0; int b = 1; int c = a + b; // expect 1 + 0 = 0` and `string helloWorld = "Hello " + "World"; // "Hello World"` | ?
 `-` | Subtract the amount of right-hand side from the left-hand side | `int a = 4; int b = 2; int c = a - b; // expect c == 2` | ?
@@ -72,7 +72,6 @@ Comparison Operators | comparing the left- and right-hand side values and return
 `>` | left-hand side is greater than right-hand side | `2 > 1; // expect to be true` | ?
 `==` | left-hand equals to right-hand side | `1 == 0; // expect to be false` | ?
 `!=` | left-hand does not equal to right-hand side | `1 != 0; // expect to be true` | ?
-`||` | ? | ? | ?
 `>=` | left-hand side is greater than or equal to right-hand side | `1 >= 1; // expect to return true` | ?
 `<=` | left-hand side is smaller than or equal to right-hand side | `1 <= 1; // expect to return true` | ?
 `if` | if the given expression evaluates to true then execute the if-clause | `if (true) { Console.WriteLine("True"); } else { Console.WriteLine("False"); } // expect "True"` | ?
@@ -93,7 +92,7 @@ bool-expression | an expression that evaluates to a boolean | `1 == 5;` | ?
 iteration statement | the statement that if evaluated to true will allow the loop to keep looping | `for (var i = 0; i < 2; i++) { Console.WriteLine(a); }` | ?
 loop body | loop body gets executed every time the loop statement evaluates to true | `for (var i = 0; i < 2; i++) { Console.WriteLine(a); }` | ?
 loop | one iteration of the loop body | ? | ?
-execution | ? | ? | ?
+execution | running of the program | ? | ?
 execution jump | ? | ? | ?
 `break` | break out of the current loop completely | ? | ?
 `continue` | skip the rest of the loop body after `continue` and enter the next loop | ? | ?
@@ -139,48 +138,47 @@ Garbage Collector | automatic memory management; in charge of allocating and fre
 `null` | a special data type that can only have one value (`null`) and signalfies that no value is assigned | ? | ?
 Invoke | calling of a method/function | ? | ?
 Field | holds data inside a class | ? | ?
-Static Class Member | ? | ? | ?
-Static Class | ? | ? | ?
-Global Access | ? | ? | ?
-Constructor | ? | ? | ?
-Initial Class Values | ? | ? | ?
-Parameterless | ? | ? | ?
-Default Contructor | ? | ? | ?
-Finalizer | ? | ? | ?
-Object Destruction | ? | ? | ?
-`GC.Collect` | ? | ? | ?
-Encapsulation | ? | ? | ?
-Access Modifier | ? | ? | ?
-`private` | ? | ? | ?
-`protected` | ? | ? | ?
-`public` | ? | ? | ?
-`internal` | ? | ? | ?
-Class Member Access | ? | ? | ?
-Inheritance | ? | ? | ?
-Property | ? | ? | ?
-Getter Method | ? | ? | ?
-Setter Method | ? | ? | ?
-Validation | ? | ? | ?
-Processing | ? | ? | ?
-`get` | ? | ? | ?
-`set` | ? | ? | ?
+Static Class Member | static data fields and methods inside a class | ? | ?
+Static Class | a class that's entirely static | ? | ?
+Global Access | when a function/method/variable is on a global scope, anywhere in the program has access to it | ? | ?
+Constructor | a special method that is called upon instantiation to give the instance initial values | ? | ?
+Initial Class Values | the inital values given through constructor? | ? | ?
+Parameterless | When a method/function signature doesn't take any parameter | ? | ?
+Default Contructor | an invisible default constructor that will return an empty instance, can be overriden | ? | ?
+Finalizer | the method that's called upon destroying of an object | ? | ?
+Object Destruction | object destroyed when not being used or stored in a variable | ? | ?
+`GC.Collect` | Invoking `GC.Collect()` to force garbage collection | ? | ?
+Encapsulation | encapsulating relevant functions and variables in one place, e.g. a class with data fields and methods | ? | ?
+Access Modifier | modifies access right to a class and/or its members | ? | ?
+`private` | accesssible only within the class | ? | ?
+`protected` | accessible from within the class and derived classes | ? | ?
+`public` | accessible through the same assembly(i.e. project) and other assemblies that reference it | ? | ?
+`internal` | accessible through the same assembly | ? | ?
+Class Member Access | Access modifier on the members of a class | ? | ?
+Inheritance | deriving a class from a base class, where the derived class inherits the base class' protected members | ? | ?
+Property | syntax sugar for getting and setting data fields in class | ? | ?
+Getter Method | return the value of the property | ? | ?
+Setter Method | set the value of the property | ? | ?
+Validation | steps to check if sth is in the correct format for processing | ? | ?
+Processing | (see above for Validation) | ? | ?
+`get` | used to declare getter method for a property | ? | ?
+`set` | used to declare setter method for a property | ? | ?
 Expression Body Syntax | ? | ? | ?
-Auto Property | ? | ? | ?
-Read-Only Property | ? | ? | ?
-Auto Property | ? | ? | ?
-base-Class | ? | ? | ?
-Inherit From | ? | ? | ?
-Derived Class | ? | ? | ?
-Child Class | ? | ? | ?
-Parent Class | ? | ? | ?
-`sealed` | ? | ? | ?
-Polymorphism | ? | ? | ?
-`as` | ? | ? | ?
-`virtual` | ? | ? | ?
-`override` | ? | ? | ?
-`base` | ? | ? | ?
-Abstraction | ? | ? | ?
-`abstract` | ? | ? | ?
-Implementation | ? | ? | ?
-Composition | ? | ? | ?
-"Composition over Inheritance" | ? | ? | ?
+Auto Property | When declared, the compiler creates private, anonymous backing fields that can only be accessed through the property's getter and setter | ? | ?
+Read-Only Property | a property whose value assignment is only available upon declaration or inside the constructor | ? | ?
+base-Class | the class a derived class is inheriting from | ? | ?
+Inherit From | the action from which a derived class is created | `class Dog : Animal` | ?
+Derived Class | the class that inherits from a base class | ? | ?
+Child Class | another word for derived class | `class Cat: Animal {} // Cat is the child class` | ?
+Parent Class | another word for base class | `class Cat: Animal {} // Animal is the parent class` | ?
+`sealed` | to prevent a class from being inherited | ? | ?
+Polymorphism | refers to that, despite of inheriting from the same base class and having its behaviors, the derived classes can look very different from the base class, as if the base class polymorphs  | ? | ?
+`as` | to explicitly convert an expression to a given type | ? | ?
+`virtual` | make a method/data field available for overriding in derived classes | ? | ?
+`override` | derived class implements and overrides virtual methods/fields of the same name from the base class | ? | ?
+`base` | used inside a derived class to reference the base class | ? | ?
+Abstraction | the practice of hiding away the details of implementation and all the user needs to know is what input to give and what output to expect | ? | ?
+`abstract` | make a class abstract, indicating it's for base class use only | ? | ?
+Implementation | A system for executing computer programs? (compilation, e.g. C# vs interpretation e.g. javascript, python...etc) | ? | ?
+Composition | class having properties that makes sense (e.g. a Hero class that has the property of type Weapon, instead of inheriting from the Weapon class) | ? | ?
+"Composition over Inheritance" | Inheritance isn't always the right software design choice, in fact if possible, sensible composition goes first, then inheritance | ? | ?
