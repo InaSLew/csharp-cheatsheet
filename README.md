@@ -67,7 +67,7 @@ immutable | State cannot be modified after created | `string t = "TEst"; t[1] = 
 Logical Operators | symbols to connect two or more expressions and evalute to true or false | `&&`, `||`,`!` | ?
 `!` | negates the following expression | `0 != 1` | ?
 `&&` | both left- and right-hand sides need to be true to evaluate to true | `true && false; // expect to return false` | ?
-`||` | if left-hand side is true then returns true; othersise evalute right-hand side returns its value | `false || true; // expect to return true` | ?
+<code>&#124;&#124;</code> | if left-hand side is true then returns true; othersise evalute right-hand side returns its value | <code> false &#124;&#124; true // expect to return true</code> | ?
 Comparison Operators | comparing the left- and right-hand side values and returns true or false | ? | ?
 `>` | left-hand side is greater than right-hand side | `2 > 1; // expect to be true` | ?
 `==` | left-hand equals to right-hand side | `1 == 0; // expect to be false` | ?
